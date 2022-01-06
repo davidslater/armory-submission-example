@@ -276,6 +276,7 @@ def get_art_model(
 ) -> PyTorchClassifier:
     model = SincNetWrapper(model_kwargs, weights_path)
     model.to(DEVICE)
+    logger.warning(f"Using weights path {weights_path}") 
 
     wrapped_model = PyTorchClassifier(
         model,
