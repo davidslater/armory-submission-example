@@ -1,4 +1,4 @@
-# docker build -t mydocker/gard_eval4_audio:0.14.2 .
+# docker build -f GARD_Dockerfile -t mydocker/gard_eval4_audio:0.14.2 .
 
 FROM twosixarmory/pytorch:0.14.2 AS mydocker
 
