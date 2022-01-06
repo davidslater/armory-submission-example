@@ -1,0 +1,12 @@
+# docker build -t mydocker/gard_eval4_audio:0.14.2 .
+
+FROM twosixarmory/pytorch:0.14.2 AS mydocker
+
+# Extend from armory docker image and add dependencies
+
+RUN /opt/conda/bin/pip install --no-cache-dir \
+    scikit-learn==1.0.2
+
+# NOTE: build dockerfile from empty directory
+
+# NOTE: avoid using ADD and COPY commands, as these are difficult to replicate on our side
